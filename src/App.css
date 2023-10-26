@@ -1,4 +1,5 @@
 body {
+  align-content: center;
   background-color: #90caf9;
   animation-name: background;
   /* animation-delay: 2s; */
@@ -11,6 +12,10 @@ h1 {
   position: fixed;
   top: 50px;
   left: 50px;
+}
+
+a {
+  text-align: center;
 }
 
 .name {
@@ -40,12 +45,3 @@ h1 {
   50%  {background-color: #29b6f6;}
   100% {background-color: #90caf9;}
 }
-
-/* @keyframes name {
-  from {
-    transform: scale(2, 3)
-  }
-  to {
-    transform: scale
-  }
-} */
