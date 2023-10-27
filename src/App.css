@@ -1,9 +1,10 @@
 body {
   align-content: center;
-  background-color: #90caf9;
   animation-name: background;
   /* animation-delay: 2s; */
   animation-duration: 20s;
+  background-color: #90caf9;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1 {
@@ -14,8 +15,28 @@ h1 {
   left: 50px;
 }
 
-a {
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-item {
+  /* animation-name: link; */
+  align-items: center;
+  align-self: flex-end;
+  background: radial-gradient(circle at 50px 50px, #29b6f6, #0d47a1);
+  background-color: #0d47a1;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  height: 120px;
+  justify-content: center;
+  /* max-width: fit-content; */
+  margin: 2%;
+  padding: 2%;
   text-align: center;
+  text-decoration: none;
+  width: 120px;
 }
 
 .name {
@@ -44,4 +65,11 @@ a {
   25%  {background-color: #0288d1;}
   50%  {background-color: #29b6f6;}
   100% {background-color: #90caf9;}
+}
+
+@keyframes link {
+  0%   {color: #90caf9;}
+  25%  {color: #29b6f6;}
+  50%  {color: #0288d1;}
+  100% {color: #0d47a1;}
 }
