@@ -1,10 +1,3 @@
-:root {
-  --width: 300px;
-  --x-speed: 13s;
-  --y-speed: 7s;
-  --transition-speed: 2.2s;
-}
-
 body {
   align-content: center;
   animation-name: background;
@@ -27,9 +20,11 @@ h1 {
   /* display: flex; */
   /* flex-direction: column;
   align-items: flex-end; */
+  height: 100vh;
+  width: 100vw;
 }
 
-/* LEFT OFF HERE - BUBBLE 2 DOESN'T HAVE SECONDARY SHADING AND STAGE2 ONLY MOVING ON X AXIS */
+/* LEFT OFF HERE - BUBBLE 2 DOESN'T HAVE SECONDARY SHADING AND STAGE2 ONLY MOVING ON X AXIS and bubble2 only moving on y*/
 .link-bubble {
   animation: bubble-anim 2s ease-out infinite, bubble-linear 20s linear infinite alternate;
   align-items: center;
@@ -48,7 +43,7 @@ h1 {
 }
 
 .link-bubble2 {
-  animation: bubble-anim 2s ease-out infinite, bubble-linear2 20s linear infinite alternate;
+  animation: bubble-anim 2s ease-out infinite, bubble2-linear 20s linear infinite alternate;
   align-items: center;
   background: radial-gradient(circle at 30px 50px, #29b6f6, #0d47a1);
   background-color: #0d47a1;
@@ -79,8 +74,9 @@ h1 {
   perspective-origin: 50% 50%;
 }
 
+/* LEFT OFF HERE - BUBBLES WONT STAY IN VIEWPORT AND RUBY LOST ITS SHINY */
 .stage2 {
-  animation: stage-linear2 20s linear infinite alternate;
+  animation: stage2-linear 20s linear infinite alternate;
   width: 120px;
   height: 120px;
   display: inline-block;
@@ -157,24 +153,24 @@ h1 {
 
 @keyframes stage-linear {
   100% {
-    transform: translateY( calc(100vh - 120px) );
+    transform: translateY(calc(100vh - 120px));
   }
 }
 
 @keyframes stage2-linear {
   100% {
-    transform: translateY( calc(-100vh - 120px) );
+    transform: translateY(calc(-100vh - 120px));
   }
 }
 
 @keyframes bubble-linear {
   100% {
-    transform: translateX( calc(100vw - 120px) );
+    transform: translateX(calc(100vw - 120px));
   }
 }
 
 @keyframes bubble2-linear {
   100% {
-    transform: translateX( calc(-100vw - 120px) );
+    transform: translateX(calc(-100vw - 120px));
   }
 }
