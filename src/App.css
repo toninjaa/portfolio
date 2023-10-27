@@ -1,3 +1,10 @@
+:root {
+  --width: 300px;
+  --x-speed: 13s;
+  --y-speed: 7s;
+  --transition-speed: 2.2s;
+}
+
 body {
   align-content: center;
   animation-name: background;
@@ -5,6 +12,7 @@ body {
   animation-duration: 20s;
   background-color: #90caf9;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
 }
 
 h1 {
@@ -16,14 +24,15 @@ h1 {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column;
+  align-items: flex-end; */
 }
 
-.link-item {
-  animation: bubble-anim 2s ease-out infinite;
+/* LEFT OFF HERE - BUBBLE 2 DOESN'T HAVE SECONDARY SHADING AND STAGE2 ONLY MOVING ON X AXIS */
+.link-bubble {
+  animation: bubble-anim 2s ease-out infinite, bubble-linear 20s linear infinite alternate;
   align-items: center;
-  align-self: flex-end;
   background: radial-gradient(circle at 30px 50px, #29b6f6, #0d47a1);
   background-color: #0d47a1;
   border-radius: 50%;
@@ -31,7 +40,23 @@ h1 {
   display: flex;
   height: 120px;
   justify-content: center;
-  /* max-width: fit-content; */
+  margin: 2%;
+  padding: 2%;
+  text-align: center;
+  text-decoration: none;
+  width: 120px;
+}
+
+.link-bubble2 {
+  animation: bubble-anim 2s ease-out infinite, bubble-linear2 20s linear infinite alternate;
+  align-items: center;
+  background: radial-gradient(circle at 30px 50px, #29b6f6, #0d47a1);
+  background-color: #0d47a1;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  height: 120px;
+  justify-content: center;
   margin: 2%;
   padding: 2%;
   text-align: center;
@@ -44,7 +69,8 @@ h1 {
   pointer-events: none;
 }
 
-.stage {
+.stage1 {
+  animation: stage-linear 20s linear infinite alternate;
   width: 120px;
   height: 120px;
   display: inline-block;
@@ -53,7 +79,17 @@ h1 {
   perspective-origin: 50% 50%;
 }
 
-.link-item .shadow {
+.stage2 {
+  animation: stage-linear2 20s linear infinite alternate;
+  width: 120px;
+  height: 120px;
+  display: inline-block;
+  margin: 20px;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+}
+
+.link-bubble .shadow {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -62,7 +98,7 @@ h1 {
   z-index: -1;
 }
 
-.link-item:before {
+.link-bubble:before {
   content: "";
   position: absolute;
   top: 1%;
@@ -116,5 +152,29 @@ h1 {
   }
   97%, 100% {
     transform: scale(1);
+  }
+}
+
+@keyframes stage-linear {
+  100% {
+    transform: translateY( calc(100vh - 120px) );
+  }
+}
+
+@keyframes stage2-linear {
+  100% {
+    transform: translateY( calc(-100vh - 120px) );
+  }
+}
+
+@keyframes bubble-linear {
+  100% {
+    transform: translateX( calc(100vw - 120px) );
+  }
+}
+
+@keyframes bubble2-linear {
+  100% {
+    transform: translateX( calc(-100vw - 120px) );
   }
 }
