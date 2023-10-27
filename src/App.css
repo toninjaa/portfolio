@@ -21,10 +21,10 @@ h1 {
 }
 
 .link-item {
-  /* animation-name: link; */
+  animation: bubble-anim 2s ease-out infinite;
   align-items: center;
   align-self: flex-end;
-  background: radial-gradient(circle at 50px 50px, #29b6f6, #0d47a1);
+  background: radial-gradient(circle at 30px 50px, #29b6f6, #0d47a1);
   background-color: #0d47a1;
   border-radius: 50%;
   color: white;
@@ -42,6 +42,37 @@ h1 {
 .name {
   height: 40vmin;
   pointer-events: none;
+}
+
+.stage {
+  width: 120px;
+  height: 120px;
+  display: inline-block;
+  margin: 20px;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+}
+
+.link-item .shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+  transform: rotateX(90deg) translateZ(-150px);
+  z-index: -1;
+}
+
+.link-item:before {
+  content: "";
+  position: absolute;
+  top: 1%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 0px, #ffffff, rgba(255, 255, 255, 0) 58%);
+  filter: blur(5px);
+  z-index: 2;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -67,9 +98,23 @@ h1 {
   100% {background-color: #90caf9;}
 }
 
-@keyframes link {
-  0%   {color: #90caf9;}
-  25%  {color: #29b6f6;}
-  50%  {color: #0288d1;}
-  100% {color: #0d47a1;}
+@keyframes bubble-anim {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scaleY(0.95) scaleX(1.05);
+  }
+  48% {
+    transform: scaleY(1.1) scaleX(0.9);
+  }
+  68% {
+    transform: scaleY(0.98) scaleX(1.02);
+  }
+  80% {
+    transform: scaleY(1.02) scaleX(0.98);
+  }
+  97%, 100% {
+    transform: scale(1);
+  }
 }
