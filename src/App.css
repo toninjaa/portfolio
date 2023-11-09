@@ -9,6 +9,10 @@ body {
   background-color: #90caf9;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0;
+  max-width: max-content;
+  max-height: max-content;
+  overflow: hidden;
+  position: relative;
 }
 
 a {
@@ -24,17 +28,13 @@ h1 {
   left: 50px;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  height: 100vh;
-  width: 10vw;
-}
-
 .weather-container {
   animation: bubble-y 20s linear infinite alternate;
   -webkit-animation: bubble-y 20s linear infinite alternate;
+}
+
+.weather-container:hover {
+  animation-play-state: paused;
 }
 
 .weather-bubble {
@@ -48,7 +48,7 @@ h1 {
   justify-content: center;
   margin: 2%;
   padding: 2%;
-  /* position: absolute; */
+  position: absolute;
   text-align: center;
   transition: transform 1s;
   width: var(--width);
@@ -64,6 +64,10 @@ h1 {
   -webkit-animation: bubble-y 20s linear infinite alternate;
 }
 
+.pal-container:hover {
+  animation-play-state: paused;
+}
+
 .pal-bubble {
   animation: bubble-x 13s linear infinite alternate; 
   -webkit-animation: bubble-x 13s linear infinite alternate;
@@ -75,6 +79,7 @@ h1 {
   justify-content: center;
   margin: 2%;
   padding: 2%;
+  position: absolute;
   text-align: center;
   transition: transform 1s;
   width: var(--width);
@@ -90,6 +95,10 @@ h1 {
   -webkit-animation: bubble-y 20s linear infinite alternate;
 }
 
+.ruby-container:hover {
+  animation-play-state: paused;
+}
+
 .ruby-bubble {
   animation: bubble-x 13s linear infinite alternate; 
   -webkit-animation: bubble-x 13s linear infinite alternate;
@@ -102,6 +111,7 @@ h1 {
   justify-content: center;
   margin: 2%;
   padding: 2%;
+  position: absolute;
   text-align: center;
   transition: transform 1s;
   width: var(--width);

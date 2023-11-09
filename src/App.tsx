@@ -2,7 +2,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="container">
+    <>
       <h1 className="name">Tonia Del Priore</h1>
       <div className="weather-container">
         <div className="weather-bubble">
@@ -27,7 +27,7 @@ function App() {
           </a>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
