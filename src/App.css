@@ -1,5 +1,7 @@
 :root {
   --width: 100px;
+  --project-width: 74.5vw;
+  --project-height: 74vh;
 }
 
 body {
@@ -31,6 +33,7 @@ h1 {
 .weather-container {
   animation: bubble-y 20s linear infinite alternate;
   -webkit-animation: bubble-y 20s linear infinite alternate;
+  display: block;
 }
 
 .weather-container:hover {
@@ -43,10 +46,10 @@ h1 {
   align-items: center;
   background: radial-gradient(circle at 30px 50px, #d3f5d5, #8df295);
   border-radius: 50%;
+  box-shadow: 10px 10px rgba(0,0,0,0.2);
   display: flex;
   height: var(--width);
   justify-content: center;
-  margin: 2%;
   padding: 2%;
   position: absolute;
   text-align: center;
@@ -62,6 +65,7 @@ h1 {
 .pal-container {
   animation: bubble-y 20s linear infinite alternate;
   -webkit-animation: bubble-y 20s linear infinite alternate;
+  display: block;
 }
 
 .pal-container:hover {
@@ -69,19 +73,20 @@ h1 {
 }
 
 .pal-bubble {
-  animation: bubble-x 13s linear infinite alternate; 
-  -webkit-animation: bubble-x 13s linear infinite alternate;
+  animation: bubble-x 13s linear .5s infinite alternate; 
+  -webkit-animation: bubble-x 13s .5s linear infinite alternate;
   align-items: center;
   background: radial-gradient(circle at 30px 50px, #e9b5f5, #e494f7);
   border-radius: 50%;
+  box-shadow: 10px 10px rgba(0,0,0,0.2);
   display: flex;
   height: var(--width);
   justify-content: center;
-  margin: 2%;
   padding: 2%;
   position: absolute;
+  left: 0;
   text-align: center;
-  transition: transform 1s;
+  transition: transform 1s .5s;
   width: var(--width);
 }
 
@@ -93,6 +98,7 @@ h1 {
 .ruby-container {
   animation: bubble-y 20s linear infinite alternate;
   -webkit-animation: bubble-y 20s linear infinite alternate;
+  display: block;
 }
 
 .ruby-container:hover {
@@ -100,18 +106,20 @@ h1 {
 }
 
 .ruby-bubble {
-  animation: bubble-x 13s linear infinite alternate; 
-  -webkit-animation: bubble-x 13s linear infinite alternate;
+  animation: bubble-x 13s linear 1s infinite alternate; 
+  -webkit-animation: bubble-x 13s linear 1s infinite alternate;
   align-items: center;
   background: radial-gradient(circle at 30px 50px, #f7dcdc, #f58556);
   background-color: #f58556;
   border-radius: 50%;
+  box-shadow: 10px 10px rgba(0,0,0,0.2);
   display: flex;
+  float: right;
   height: var(--width);
   justify-content: center;
-  margin: 2%;
   padding: 2%;
   position: absolute;
+  /* right: 0; */
   text-align: center;
   transition: transform 1s;
   width: var(--width);
@@ -125,6 +133,23 @@ h1 {
 .name {
   height: 40vmin;
   pointer-events: none;
+}
+
+.project-div {
+  border: 2px solid rebeccapurple;
+  border-radius: 5px;
+  display: flow-root;
+  width: var(--project-width);
+  height: var(--project-height);
+  left: 25vw;
+  top: 25vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-header {
+  position: absolute;
+  left: 12vw;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -167,25 +192,24 @@ h1 {
 
 @keyframes bubble-y {
   100% {
-    transform: translateY(calc(100vh - var(--width)));
+    transform: translateY(calc(var(--project-height) - var(--width)));
   }
 }
 
 @-webkit-keyframes bubble-y {
   100% {
-    transform: translateY(calc(100vh - var(--width)));
+    transform: translateY(calc(var(--project-height) - var(--width)));
   }
 }
 
 @keyframes bubble-x {
   100% {
-    transform: translateX(calc(100vw - var(--width)));
+    transform: translateX(calc(var(--project-width) - var(--width)));
   }
 }
 
 @-webkit-keyframes bubble-x {
   100% {
-    transform: translateX(calc(100vw - var(--width)));
+    transform: translateX(calc(var(--project-width) - var(--width)));
   }
 }
-
