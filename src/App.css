@@ -46,7 +46,7 @@ h1 {
   align-items: center;
   background: radial-gradient(circle at 30px 50px, #d3f5d5, #8df295);
   border-radius: 50%;
-  box-shadow: 10px 10px rgba(0,0,0,0.2);
+  box-shadow: 10px 10px rgba(106, 83, 83, 0.2);
   display: flex;
   height: var(--width);
   justify-content: center;
