@@ -40,9 +40,9 @@ h1 {
   animation-play-state: paused;
 }
 
-.weather-bubble {
-  animation: bubble-x 13s linear infinite alternate; 
-  -webkit-animation: bubble-x 13s linear infinite alternate;
+.bubble {
+  /* animation: bubble-x 13s linear infinite alternate; 
+  -webkit-animation: bubble-x 13s linear infinite alternate; */
   align-items: center;
   background: radial-gradient(circle at 30px 50px, #d3f5d5, #8df295);
   border-radius: 50%;
@@ -51,16 +51,16 @@ h1 {
   height: var(--width);
   justify-content: center;
   padding: 2%;
-  position: absolute;
+  /* position: absolute; */
   text-align: center;
-  transition: transform 1s;
+  /* transition: transform 1s; */
   width: var(--width);
 }
 
-.weather-bubble:hover {
+/* .weather-bubble:hover {
   transform: scale(1.5);
   animation-play-state: paused;
-}
+} */
 
 .pal-container {
   animation: bubble-y 20s linear infinite alternate;

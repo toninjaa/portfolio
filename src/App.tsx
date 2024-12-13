@@ -1,35 +1,17 @@
 import './App.css';
+import Bubble from './Components/Bubble';
 
 function App() {
   return (
     <>
       <h1 className="name">Tonia Del Priore</h1>
-      <div className="project-div">
-        <h3 className="project-header">Projects</h3>
-        <div className="weather-container">  
-          <div className="weather-bubble">
-            <a href="https://toninjaa.github.io/weather-app/" target="_blank">
-              Weather Widget
-            </a>
-          </div>
-        </div>
+        {/* <h3 className="project-header">Projects</h3> */}
+        <Bubble link="https://toninjaa.github.io/weather-app/" title='Weather Widget' />
 
-        <div className="pal-container">
-          <div className="pal-bubble">
-            <a  href="https://toninjaa.github.io/palindrome-site/" target="_blank">
-              Palindrome Detector
-            </a>
-          </div>
-        </div>
-
-        <div className="ruby-container">
-          <div className="ruby-bubble">
-            <a href="https://rubygems.org/profiles/toninjaa" target="_blank">
-              Ruby Gems
-            </a>
-          </div>
-        </div>
-      </div>
+        <Bubble link="https://toninjaa.github.io/palindrome-site/" title='Palindrome Detector' />
+        
+        <Bubble link="https://rubygems.org/profiles/toninjaa" title='Ruby Gems'
+        />
     </>
   );
 }
