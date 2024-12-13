@@ -1,16 +1,15 @@
 :root {
   --width: 100px;
-  --project-width: 74.5vw;
-  --project-height: 74vh;
 }
 
 body {
   align-content: center;
   animation-name: background;
   animation-duration: 20s;
-  background-color: #90caf9;
+  background-color: #fbb9dc;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0;
+  margin-top: 15vh;
   max-width: max-content;
   max-height: max-content;
   overflow: hidden;
@@ -19,30 +18,9 @@ body {
 
 a {
   text-decoration: none;
-  color: white;
-}
-
-h1 {
-  align-content: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  position: fixed;
-  top: 50px;
-  left: 50px;
-}
-
-.weather-container {
-  animation: bubble-y 20s linear infinite alternate;
-  -webkit-animation: bubble-y 20s linear infinite alternate;
-  display: block;
-}
-
-.weather-container:hover {
-  animation-play-state: paused;
 }
 
 .bubble {
-  /* animation: bubble-x 13s linear infinite alternate; 
-  -webkit-animation: bubble-x 13s linear infinite alternate; */
   align-items: center;
   background: radial-gradient(circle at 30px 50px, #d3f5d5, #8df295);
   border-radius: 50%;
@@ -50,108 +28,12 @@ h1 {
   display: flex;
   height: var(--width);
   justify-content: center;
+  margin: .5em;
   padding: 2%;
   /* position: absolute; */
   text-align: center;
   /* transition: transform 1s; */
   width: var(--width);
-}
-
-/* .weather-bubble:hover {
-  transform: scale(1.5);
-  animation-play-state: paused;
-} */
-
-.pal-container {
-  animation: bubble-y 20s linear infinite alternate;
-  -webkit-animation: bubble-y 20s linear infinite alternate;
-  display: block;
-}
-
-.pal-container:hover {
-  animation-play-state: paused;
-}
-
-.pal-bubble {
-  animation: bubble-x 13s linear .5s infinite alternate; 
-  -webkit-animation: bubble-x 13s .5s linear infinite alternate;
-  align-items: center;
-  background: radial-gradient(circle at 30px 50px, #e9b5f5, #e494f7);
-  border-radius: 50%;
-  box-shadow: 10px 10px rgba(0,0,0,0.2);
-  display: flex;
-  height: var(--width);
-  justify-content: center;
-  padding: 2%;
-  position: absolute;
-  left: 0;
-  text-align: center;
-  transition: transform 1s .5s;
-  width: var(--width);
-}
-
-.pal-bubble:hover {
-  transform: scale(1.5);
-  animation-play-state: paused;
-}
-
-.ruby-container {
-  animation: bubble-y 20s linear infinite alternate;
-  -webkit-animation: bubble-y 20s linear infinite alternate;
-  display: block;
-}
-
-.ruby-container:hover {
-  animation-play-state: paused;
-}
-
-.ruby-bubble {
-  animation: bubble-x 13s linear 1s infinite alternate; 
-  -webkit-animation: bubble-x 13s linear 1s infinite alternate;
-  align-items: center;
-  background: radial-gradient(circle at 30px 50px, #f7dcdc, #f58556);
-  background-color: #f58556;
-  border-radius: 50%;
-  box-shadow: 10px 10px rgba(0,0,0,0.2);
-  display: flex;
-  float: right;
-  height: var(--width);
-  justify-content: center;
-  padding: 2%;
-  position: absolute;
-  /* right: 0; */
-  text-align: center;
-  transition: transform 1s;
-  width: var(--width);
-}
-
-.ruby-bubble:hover {
-  transform: scale(1.5);
-  animation-play-state: paused;
-}
-
-.name {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.project-div {
-  border: 1px solid black;
-  border-radius: 5px;
-  display: flow-root;
-  width: var(--project-width);
-  height: var(--project-height);
-  left: 25vw;
-  right: 25vw;
-  top: 25vh;
-  position: relative;
-  overflow: hidden;
-}
-
-.project-header {
-  position: absolute;
-  left: 12vw;
-  z-index: 1;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -178,7 +60,7 @@ h1 {
   }
 }
 
-@keyframes background {
+/* @keyframes background {
   0%   {background-color: #0d47a1;}
   25%  {background-color: #0288d1;}
   50%  {background-color: #29b6f6;}
@@ -190,28 +72,4 @@ h1 {
   25%  {background-color: #0288d1;}
   50%  {background-color: #29b6f6;}
   100% {background-color: #90caf9;}
-}
-
-@keyframes bubble-y {
-  100% {
-    transform: translateY(calc(var(--project-height) - var(--width)));
-  }
-}
-
-@-webkit-keyframes bubble-y {
-  100% {
-    transform: translateY(calc(var(--project-height) - var(--width)));
-  }
-}
-
-@keyframes bubble-x {
-  100% {
-    transform: translateX(calc(var(--project-width) - var(--width)));
-  }
-}
-
-@-webkit-keyframes bubble-x {
-  100% {
-    transform: translateX(calc(var(--project-width) - var(--width)));
-  }
-}
+} */
