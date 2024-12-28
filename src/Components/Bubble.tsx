@@ -11,8 +11,12 @@ export default function Bubble(props: Props) {
   const { link, title } = props;
 
   return (
-    <MenuItem sx={{ whiteSpace: 'wrap', 
-      '&:hover': { backgroundColor: 'white' } }}>
+    <MenuItem
+      sx={{
+        whiteSpace: 'wrap', 
+        '&:hover': { backgroundColor: 'white' },
+      }}
+    >
       <a href={link} target='_blank'>
         <motion.div
           className="bubble"

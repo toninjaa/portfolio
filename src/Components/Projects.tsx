@@ -13,10 +13,18 @@ export default function Projects() {
   }
 
   return (
-    <Button sx={{ border: '2px solid  #B9FBD8', borderRadius: '4', marginLeft: '35vw', marginTop: '5vh' }} onClick={handleMenuClick}>
+    <Button
+      sx={{
+        border: '2px solid  #B9FBD8',
+        borderRadius: '4',
+        marginTop: '5vh',
+      }}
+      onClick={handleMenuClick}>
+
       <Typography variant="h3">
         Projects
       </Typography>
+
       <Menu
         anchorOrigin={{
           vertical: 'bottom',
@@ -30,11 +38,11 @@ export default function Projects() {
         }}
       >
         <Stack direction='row'>
-        <Bubble link="https://toninjaa.github.io/weather-app/" title='Weather Widget' />
+          <Bubble link="https://toninjaa.github.io/weather-app/" title='Weather Widget' />
 
-        <Bubble link="https://toninjaa.github.io/palindrome-site/" title='Palindrome Detector' />
+          <Bubble link="https://toninjaa.github.io/palindrome-site/" title='Palindrome Detector' />
 
-        <Bubble link="https://rubygems.org/profiles/toninjaa" title='Ruby Gems' />
+          <Bubble link="https://rubygems.org/profiles/toninjaa" title='Ruby Gems' />
         </Stack>
       </Menu>
     </Button>
