@@ -13,7 +13,7 @@ export default function Projects() {
   }
 
   return (
-    <Button sx={{ marginLeft: '35vw' }} onClick={handleMenuClick}>
+    <Button sx={{ border: '2px solid  #B9FBD8', borderRadius: '4', marginLeft: '35vw', marginTop: '5vh' }} onClick={handleMenuClick}>
       <Typography variant="h3">
         Projects
       </Typography>
