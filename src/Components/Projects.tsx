@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
+import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Bubble from './Bubble';
 
@@ -12,12 +13,14 @@ export default function Projects() {
   }
 
   return (
-    <Button onClick={handleMenuClick}>
-    <Typography variant="h3">Projects</Typography>
+    <Button sx={{ marginLeft: '35vw' }} onClick={handleMenuClick}>
+      <Typography variant="h3">
+        Projects
+      </Typography>
       <Menu
         anchorOrigin={{
           vertical: 'bottom',
-          horizontal: 'right',
+          horizontal: 'center',
         }}
         open={menuOpen}
         sx={{
@@ -26,12 +29,13 @@ export default function Projects() {
           },
         }}
       >
-
+        <Stack direction='row'>
         <Bubble link="https://toninjaa.github.io/weather-app/" title='Weather Widget' />
 
         <Bubble link="https://toninjaa.github.io/palindrome-site/" title='Palindrome Detector' />
 
         <Bubble link="https://rubygems.org/profiles/toninjaa" title='Ruby Gems' />
+        </Stack>
       </Menu>
     </Button>
   )
