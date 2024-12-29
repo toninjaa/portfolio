@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 export default function SkillStack() {
-  const env = window.location.href.includes("local") ? "./portfolio" : "."; 
+  const env = window.location.href.includes("local") ? ".." : "."; 
 
   return (
     <Stack

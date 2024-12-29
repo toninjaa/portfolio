@@ -5,7 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from "@mui/material/Typography";
 
 export default function Header() {
-  const env = window.location.href.includes("local") ? "./portfolio" : "."; 
+  const env = window.location.href.includes("local") ? ".." : "."; 
 
   return (
     <Paper elevation={3}>

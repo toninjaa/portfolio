@@ -22,7 +22,7 @@ export default function ContactStack() {
 
   // local and production have different paths, so we need this to tell
   // each env where to look
-  const env = window.location.href.includes("local") ? "./portfolio" : "."; 
+  const env = window.location.href.includes("local") ? ".." : "."; 
 
   return (
     <Stack
@@ -72,7 +72,7 @@ export default function ContactStack() {
           Resume
         </Typography>
       </Divider>
-      <a href='../resume.pdf' target='_blank' rel='noopener noreferrer'>
+      <a href={`${env}/portfolio/resume.pdf`} target='_blank' rel='noopener noreferrer'>
         <Button size='large'>
           <DescriptionIcon style={{ color: palette.primary.dark }} />
         </Button>
