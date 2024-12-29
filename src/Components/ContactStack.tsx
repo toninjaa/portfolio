@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
@@ -13,22 +13,7 @@ import { useTheme } from '@mui/material';
 
 export default function ContactStack() {
   const [copySuccess, setCopySuccess] = useState(false);
-  const buttonRef = useRef(null);
   const { palette } = useTheme();
-
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (buttonRef.current && !buttonRef.current.contains(event.target)) {
-        setCopySuccess(false);
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside);
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
   
   function handleMailClick() {
     navigator.clipboard.writeText('toniadelpriore@gmail.com')
@@ -72,7 +57,7 @@ export default function ContactStack() {
           Email
         </Typography>
       </Divider>
-      <Button ref={buttonRef} onClick={handleMailClick}>
+      <Button onClick={handleMailClick}>
         <Tooltip title={copySuccess ? 'Success' : 'Copy to Clipboard'}>
           <MailIcon style={{ color: palette.primary.dark }} />
         </Tooltip>
