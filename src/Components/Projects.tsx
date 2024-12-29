@@ -14,28 +14,33 @@ export default function Projects() {
 
   return (
     <Button
-      sx={{
-        border: '2px solid  #B9FBD8',
+      sx={!menuOpen ? {
+        border: '2px solid #00D27C',
         borderRadius: '4',
         marginTop: '5vh',
-      }}
+      } : {}}
       onClick={handleMenuClick}>
 
-      <Typography variant="h3">
-        Projects
-      </Typography>
+      {!menuOpen &&
+        <Typography color='primary.dark' variant="h3">
+          Projects
+        </Typography>
+      }
 
       <Menu
         anchorOrigin={{
-          vertical: 'bottom',
+          vertical: 'center',
           horizontal: 'center',
         }}
         open={menuOpen}
         sx={{
           '& .MuiPaper-root': {
+            background: 'none',
             boxShadow: 'none',
           },
+          marginTop: '8px'
         }}
+        transformOrigin={{ vertical: 'top', horizontal: "center" }}
       >
         <Stack direction='row'>
           <Bubble link="https://toninjaa.github.io/weather-app/" title='Weather Widget' />

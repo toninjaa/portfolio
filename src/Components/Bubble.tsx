@@ -14,7 +14,7 @@ export default function Bubble(props: Props) {
     <MenuItem
       sx={{
         whiteSpace: 'wrap', 
-        '&:hover': { backgroundColor: 'white' },
+        '&:hover': { background: 'none' },
       }}
     >
       <a href={link} target='_blank'>
