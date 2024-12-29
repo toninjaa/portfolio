@@ -31,7 +31,7 @@ export default function ContactStack() {
     >
       <Avatar
         alt='Tonia Del Priore'
-        src={`${env}../brontosaurus.png`}
+        src={`${env}/brontosaurus.png`}
         sx={{ height: 'auto', width: '10vw' }}
         variant='square'
       />
