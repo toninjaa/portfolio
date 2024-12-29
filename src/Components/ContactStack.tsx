@@ -72,7 +72,7 @@ export default function ContactStack() {
           Resume
         </Typography>
       </Divider>
-      <a href={`${env}/portfolio/resume.pdf`} target='_blank' rel='noopener noreferrer'>
+      <a href={window.location.href.includes("local") ? '../portfolio/resume.pdf' : './resume.pdf'} target='_blank' rel='noopener noreferrer'>
         <Button size='large'>
           <DescriptionIcon style={{ color: palette.primary.dark }} />
         </Button>
