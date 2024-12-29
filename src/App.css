@@ -10,7 +10,7 @@ body {
   margin-top: 15vh;
   max-width: max-content;
   max-height: max-content;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
 }
 
@@ -26,7 +26,7 @@ a {
   display: flex;
   height: var(--width);
   justify-content: center;
-  margin: .5em;
+  margin: 1em;
   padding: 2%;
   /* position: absolute; */
   text-align: center;
