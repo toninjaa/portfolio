@@ -20,6 +20,8 @@ export default function ContactStack() {
     setCopySuccess(true);
   }
 
+  const env = window.location.href.includes("local") ? "./portfolio" : "."; 
+  // /Users/ToniaRudi/repos/portfolio/public/brontosaurus.png
   return (
     <Stack
       alignItems='center'
@@ -29,7 +31,7 @@ export default function ContactStack() {
     >
       <Avatar
         alt='Tonia Del Priore'
-        src='../brontosaurus.png'
+        src={`${env}../brontosaurus.png`}
         sx={{ height: 'auto', width: '10vw' }}
         variant='square'
       />
