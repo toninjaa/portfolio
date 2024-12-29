@@ -9,7 +9,7 @@ export default function ContentStack() {
       alignItems='center'
       direction='column'
       justifyContent='flex-start'
-      sx={{ maxWidth: '70%' }}
+      sx={{ minWidth: '70%' }}
     >
       <Stack>
         <Divider aria-hidden='true' color='primary.dark' orientation='horizontal' flexItem>
@@ -22,14 +22,14 @@ export default function ContentStack() {
         </Typography>
       </Stack>
 
-      <Stack>
-        <Divider aria-hidden='true' color='primary.dark' orientation='horizontal' flexItem>
+      <Stack sx={{ width: '100%' }}>
+        <Divider aria-hidden='true' color='primary.dark' orientation='horizontal' flexItem >
           <Typography color='primary.dark' variant='h3'>
             Projects
           </Typography>
         </Divider>
 
-        <Stack direction='row'>
+        <Stack direction='row' justifyContent='center'>
           <Bubble link="https://toninjaa.github.io/weather-app/" title='Weather Widget' />
 
           <Bubble link="https://toninjaa.github.io/palindrome-site/" title='Palindrome Detector' />
