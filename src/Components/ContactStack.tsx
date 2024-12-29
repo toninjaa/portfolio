@@ -20,8 +20,10 @@ export default function ContactStack() {
     setCopySuccess(true);
   }
 
+  // local and production have different paths, so we need this to tell
+  // each env where to look
   const env = window.location.href.includes("local") ? "./portfolio" : "."; 
-  // /Users/ToniaRudi/repos/portfolio/public/brontosaurus.png
+
   return (
     <Stack
       alignItems='center'

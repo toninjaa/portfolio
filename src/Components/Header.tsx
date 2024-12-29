@@ -5,6 +5,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from "@mui/material/Typography";
 
 export default function Header() {
+  const env = window.location.href.includes("local") ? "./portfolio" : "."; 
+
   return (
     <Paper elevation={3}>
       <AppBar
@@ -15,7 +17,7 @@ export default function Header() {
         <Toolbar>
           <Avatar
             alt='Tonia Del Priore'
-            src='../favicon.ico'
+            src={`${env}/favicon.ico`}
             sx={{ height: 'auto', width: '64px' }}
             variant='square'
           />

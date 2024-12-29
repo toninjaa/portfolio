@@ -4,6 +4,8 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 export default function SkillStack() {
+  const env = window.location.href.includes("local") ? "./portfolio" : "."; 
+
   return (
     <Stack
       alignItems='center'
@@ -13,7 +15,7 @@ export default function SkillStack() {
     >
       <Avatar
         alt='Tonia Del Priore'
-        src='../laptop wave.png'
+        src={`${env}/laptopWave.png`}
         sx={{ height: 'auto', width: '10vw' }}
         variant='square'
       />
