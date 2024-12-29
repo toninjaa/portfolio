@@ -8,10 +8,10 @@ export default function PageContainer() {
   return (
     <Stack
       alignItems='flex-start'
-      direction='row'
+      direction={{ xs: 'column', sm: 'row' }}
+      spacing={{ xs: 1, sm: 2, md: 4 }}
       divider={<Divider color='primary.dark' orientation="vertical" flexItem />}
       justifyContent='center'
-      spacing={4}
       sx={{ 
         margin: '2em',
       }}
