@@ -69,7 +69,7 @@ export default function ContactStack() {
         </Divider>
 
         <Button onClick={handleMailClick}>
-          <Tooltip title={copySuccess ? 'Success' : 'Copy to Clipboard'}>
+          <Tooltip title={copySuccess ? 'Email copied to clipboard!' : 'Copy to Clipboard'}>
             <MailIcon style={{ color: theme.palette.primary.dark }} />
           </Tooltip>
         </Button>
