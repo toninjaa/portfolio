@@ -1,5 +1,5 @@
 :root {
-  --width: 100px;
+  --width: 118px;
 }
 
 body {
@@ -18,25 +18,101 @@ a {
   text-decoration: none;
 }
 
+.bubble-pond {
+  height: clamp(280px, 34vw, 420px);
+  margin: 1em auto 0;
+  max-width: 720px;
+  overflow: hidden;
+  position: relative;
+  width: min(100%, 72vw);
+}
+
+.bubble-link {
+  color: inherit;
+  outline-offset: 6px;
+}
+
+.moving-bubble-link {
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 0;
+  will-change: transform;
+}
+
 .bubble {
   align-items: center;
-  background: radial-gradient(circle at 30px 50px, #d3f5d5, #8df295);
+  background:
+    radial-gradient(circle at 28% 24%, rgba(255, 255, 255, 0.95) 0 9%, rgba(255, 255, 255, 0) 18%),
+    radial-gradient(circle at 35% 32%, rgba(255, 255, 255, 0.72) 0 14%, rgba(255, 255, 255, 0) 31%),
+    radial-gradient(circle at 64% 74%, rgba(32, 130, 74, 0.42), rgba(32, 130, 74, 0) 38%),
+    radial-gradient(circle at 50% 45%, #dcffe2 0, #8df295 52%, #42c563 100%);
   border-radius: 50%;
-  box-shadow: 10px 10px rgba(106, 83, 83, 0.2);
+  box-shadow:
+    inset -16px -18px 24px rgba(24, 101, 55, 0.3),
+    inset 12px 14px 22px rgba(255, 255, 255, 0.72),
+    0 18px 26px rgba(43, 83, 60, 0.22),
+    0 4px 10px rgba(255, 255, 255, 0.56);
   display: flex;
   height: var(--width);
   justify-content: center;
-  margin: 1em;
+  margin: 0;
   padding: 2%;
-  /* position: absolute; */
+  position: relative;
   text-align: center;
-  /* transition: transform 1s; */
+  transform-style: preserve-3d;
   width: var(--width);
+}
+
+.bubble::before {
+  background:
+    radial-gradient(ellipse at center, rgba(255, 255, 255, 0.9) 0 24%, rgba(255, 255, 255, 0) 72%);
+  border-radius: 50%;
+  content: '';
+  height: 26%;
+  left: 22%;
+  position: absolute;
+  top: 16%;
+  transform: rotate(-24deg);
+  width: 36%;
+}
+
+.bubble::after {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0) 68%);
+  border-radius: 50%;
+  content: '';
+  inset: 8%;
+  position: absolute;
+}
+
+.bubble-title {
+  color: #164f31;
+  font-weight: 700;
+  line-height: 1.1;
+  max-width: 86%;
+  position: relative;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+  z-index: 1;
+}
+
+.moving-bubble {
+  transition: filter 180ms ease;
+}
+
+.moving-bubble.is-paused {
+  filter: brightness(1.06) saturate(1.08);
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .name {
     animation: name-spin 1 5s linear;
+  }
+}
+
+@media (max-width: 600px) {
+  .bubble-pond {
+    height: 360px;
+    width: 100%;
   }
 }
 

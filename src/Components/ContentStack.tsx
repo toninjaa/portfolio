@@ -1,7 +1,14 @@
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import Bubble from './Bubble';
+import { ProjectBubbles } from './Bubble';
+
+const projects = [
+  { link: 'https://toninjaa.github.io/weather-app/', title: 'Weather Widget' },
+  { link: 'https://toninjaa.github.io/palindrome-site/', title: 'Palindrome Detector' },
+  { link: 'https://rubygems.org/profiles/toninjaa', title: 'Ruby Gems' },
+  { link: 'https://toninjaa.github.io/sketchy', title: 'Screenplay Writer' },
+];
 
 export default function ContentStack() {
   return (
@@ -29,13 +36,7 @@ export default function ContentStack() {
           </Typography>
         </Divider>
 
-        <Stack direction='row' justifyContent='center'>
-          <Bubble link="https://toninjaa.github.io/weather-app/" title='Weather Widget' />
-
-          <Bubble link="https://toninjaa.github.io/palindrome-site/" title='Palindrome Detector' />
-
-          <Bubble link="https://rubygems.org/profiles/toninjaa" title='Ruby Gems' />
-        </Stack>
+        <ProjectBubbles bubbles={projects} />
       </Stack>
     </Stack>
   )
