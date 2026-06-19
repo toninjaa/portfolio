@@ -13,7 +13,8 @@ export default function PageContainer() {
       divider={<Divider color='primary.dark' orientation="vertical" flexItem />}
       justifyContent='center'
       sx={{ 
-        margin: '2em',
+        margin: { xs: '0.25rem 1rem 1rem', sm: '0.5rem 1.25rem 0', md: '0.5rem 2rem 0' },
+        width: 'calc(100% - 2rem)',
       }}
     >
       <ContactStack />

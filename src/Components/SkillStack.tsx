@@ -14,9 +14,9 @@ export default function SkillStack() {
     <Stack
       alignItems={{ xs: 'flex-start', sm: 'center' }}
       direction={{ xs: 'row', sm: 'column' }}
-      spacing={{ xs: 1, sm: 2, md: 4 }}
+      spacing={{ xs: 0.5, sm: 1, md: 1.5 }}
       justifyContent='flex-start'
-      sx={{ maxWidth: '15%' }}
+      sx={{ maxWidth: { xs: '22%', sm: '15%', md: '14%' } }}
     >
       {largeScreen ? ( 
       <>
@@ -37,7 +37,7 @@ export default function SkillStack() {
             Languages
           </Typography>
         </Divider>
-        <Typography color='primary.dark' variant='subtitle2'>
+        <Typography color='primary.dark' variant='subtitle2' sx={{ lineHeight: 1.25 }}>
           Go, TypeScript, JavaScript, HTML, CSS, SQL, SoQL
         </Typography>
         
@@ -51,7 +51,7 @@ export default function SkillStack() {
             Libraries
           </Typography>
         </Divider>
-        <Typography color='primary.dark' variant='subtitle2'>
+        <Typography color='primary.dark' variant='subtitle2' sx={{ lineHeight: 1.25 }}>
           React, Material UI, GORM
         </Typography>
         
@@ -65,7 +65,7 @@ export default function SkillStack() {
             Version Control
           </Typography>
         </Divider>
-        <Typography color='primary.dark' variant='subtitle2'>
+        <Typography color='primary.dark' variant='subtitle2' sx={{ lineHeight: 1.25 }}>
           Git, GitHub
         </Typography>
 
@@ -79,7 +79,7 @@ export default function SkillStack() {
             DevOps
           </Typography>
         </Divider>
-        <Typography color='primary.dark' variant='subtitle2'>
+        <Typography color='primary.dark' variant='subtitle2' sx={{ lineHeight: 1.25 }}>
           GCP, Kubernetes, Docker, AWS Lambda
         </Typography>
 
@@ -93,13 +93,13 @@ export default function SkillStack() {
             Other
           </Typography>
         </Divider>
-        <Typography color='primary.dark' variant='subtitle2'>
+        <Typography color='primary.dark' variant='subtitle2' sx={{ lineHeight: 1.25 }}>
           Technical Writing, Peer Programming, Creative Problem Solving and Debugging
         </Typography>
       </>
       ) : (
         <>
-        <Typography color='primary.dark' variant='subtitle2'>
+        <Typography color='primary.dark' variant='subtitle2' sx={{ lineHeight: 1.25 }}>
           Languages: Go, TypeScript, JavaScript, HTML, CSS, SQL, SoQL
         </Typography>
         <Divider
@@ -109,7 +109,7 @@ export default function SkillStack() {
           flexItem
         />
 
-        <Typography color='primary.dark' variant='subtitle2'>
+        <Typography color='primary.dark' variant='subtitle2' sx={{ lineHeight: 1.25 }}>
           Libraries: React, Material UI, GORM
         </Typography>
         <Divider
@@ -119,7 +119,7 @@ export default function SkillStack() {
           flexItem
         />
 
-        <Typography color='primary.dark' variant='subtitle2'>
+        <Typography color='primary.dark' variant='subtitle2' sx={{ lineHeight: 1.25 }}>
           Version Control: Git, GitHub
         </Typography>
         <Divider
@@ -129,7 +129,7 @@ export default function SkillStack() {
           flexItem
         />
 
-        <Typography color='primary.dark' variant='subtitle2'>
+        <Typography color='primary.dark' variant='subtitle2' sx={{ lineHeight: 1.25 }}>
           DevOps: GCP, Kubernetes, Docker, AWS Lambda
         </Typography>
         <Divider
@@ -139,7 +139,7 @@ export default function SkillStack() {
           flexItem
         />
 
-        <Typography color='primary.dark' variant='subtitle2'>
+        <Typography color='primary.dark' variant='subtitle2' sx={{ lineHeight: 1.25 }}>
           Other: Technical Writing, Peer Programming, Creative Problem Solving and Debugging
         </Typography>
         </>

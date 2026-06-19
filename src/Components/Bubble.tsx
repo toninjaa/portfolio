@@ -14,6 +14,7 @@ interface BubbleState extends Props {
   vx: number,
   vy: number,
   paused: boolean,
+  tone: 'pink' | 'blue' | 'purple' | 'green',
 }
 
 interface ProjectBubblesProps {
@@ -53,6 +54,7 @@ export function ProjectBubbles({ bubbles }: ProjectBubblesProps) {
       y: 30 + (index % 2) * 64,
       vx: index % 2 === 0 ? 56 : -48,
       vy: index % 3 === 0 ? 44 : -52,
+      tone: ['pink', 'blue', 'purple', 'green'][index % 4] as BubbleState['tone'],
       paused: false,
     })),
     [bubbles],
@@ -179,7 +181,7 @@ export function ProjectBubbles({ bubbles }: ProjectBubblesProps) {
           target='_blank'
         >
           <motion.div
-            className={`bubble moving-bubble${hoveredId.current === bubble.id ? ' is-paused' : ''}`}
+            className={`bubble bubble--${bubble.tone} moving-bubble${hoveredId.current === bubble.id ? ' is-paused' : ''}`}
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
           >
